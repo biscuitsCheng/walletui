@@ -1,0 +1,13 @@
+{
+  "usingComponents": {
+    "init": "/components/init",
+    "row": "/dist/row/index",
+    "col": "/dist/col/index",
+    "panel": "/dist/panel/index",
+    "picker": "/dist/picker/index",
+    "popup": "/dist/popup/index",
+    "icon": "/dist/icon/index",
+    "cellGroup":"/dist/cell-group/index",
+    "field": "/dist/field/index"
+  }
+}

@@ -1,0 +1,6 @@
+.bannel{
+  height: 60px
+}
+.indexCell{
+  padding-top: 130px
+}

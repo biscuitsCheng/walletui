@@ -1,0 +1,15 @@
+{
+  "usingComponents": {
+    "init": "/components/init",
+    "row": "/dist/row/index",
+    "col": "/dist/col/index",
+    "tab": "/dist/tab/index",
+    "cellGroup": "/dist/cell-group/index",
+    "cell": "/dist/cell/index",
+    "van-dialog": "/dist/dialog/index",
+    "van-swipe-cell": "/dist/swipe-cell/index",
+     "icon": "/dist/icon/index",
+     "van-tag":"/dist/tag/index",
+    "tabs": "/dist/tabs/index"
+  }
+}

@@ -1,0 +1,50 @@
+<init id='init' binddelaydo="getInitInfo" />
+
+<view>
+  <view class="bannel"></view>
+  <cellGroup>
+    <row class="indexCell">
+      <col offset="3" span="11">
+      <view class="font">类型:</view>
+      </col>
+      <col wx:if="{{ activeType == 0 }}">
+      <van-button type="warning">支出</van-button>
+      </col>
+      <col wx:else>
+      <van-button type="default" data-type="0" bindtap="changeType">支出</van-button>
+      </col>
+      <col wx:if="{{ activeType == 0 }}">
+      <van-button type="default" data-type="1" bindtap="changeType">收入</van-button>
+      </col>
+      <col wx:else>
+      <van-button type="info">收入</van-button>
+      </col>
+    </row>
+
+    <row class="indexCell">
+      <col offset="3" span="9">
+      <view class="font">种类:</view>
+      </col>
+      <col offset="2" span="9">
+      <van-button size="large" icon="edit" bind:click="changeInfoType" type="info">{{infoTypes[infoTypesIndex].name}}</van-button>
+      </col>
+    </row>
+
+
+    <field value="{{price}}" bind:blur="inputPrice" name="price" label="金额" placeholder="请输入金额" maxlength="8" left-icon="gold-coin-o" type="digit" required="true" border="{{ true }}" />
+
+    <field value="{{remark}}" bind:blur="inputRemark" label="备注" name="remark" placeholder="请输入备注" left-icon="comment-o" type="textarea" border="{{ false }}" />
+  <view class="bannel"></view>
+      <van-button class="indexCell" round type="primary" size="large"  bindtap="submit">记账</van-button>
+  </cellGroup>
+
+</view>
+
+<popup class="custom-class" position="bottom" show="{{changeInfoType}}" bind:close="unchooseInfoType" close-on-click-overlay>
+  <view style="width:100%">
+    <picker columns="{{infoTypes}}" value-key="name" default-index="{{infoTypesIndex}}" bind:change="chooseInfoType"></picker>
+  </view>
+</popup>
+<!-- <view slot="footer">
+    <van-button size="small" type="danger">提交</van-button>
+  </view> -->

@@ -1,0 +1,12 @@
+<van-dialog
+  use-slot
+  title="提示"
+  show="{{ !isAuthorization }}"
+  show-cancel-button
+  confirm-button-open-type="getUserInfo"
+  bind:close="onClose"
+  bind:getuserinfo="getUserInfo"
+>
+<view class="van-multi-ellipsis--l3,font">为了正常使用,需要获取您的个人信息(头像、昵称等)。请立即授权</view>
+
+</van-dialog>

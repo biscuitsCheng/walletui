@@ -1,0 +1,28 @@
+<init id='init' binddelaydo="getInitInfo" />
+<van-dialog id="van-dialog" />
+<tabs active="{{ active }}" bind:change="onChange" sticky>
+  <tab title="全部" />
+  <tab title="支出" />
+  <tab title="收入" />
+
+</tabs>
+<view wx:for="{{bills}}" wx:item="{{item}}" wx:key="{{item.billNo}}">
+  <van-swipe-cell data-billno="{{item.billNo}}" async-close bind:close="onClose" right-width="{{ 65 }}">
+    <cellGroup>
+      <cell value="{{item.price}}">
+        <view slot="title">
+          <view class="van-cell-text">{{item.typeInfoName}}
+            <van-tag wx:if="{{item.type == 1}}" type="success">收入</van-tag>
+            <van-tag wx:else plain type="danger">支出</van-tag>
+          </view>
+        </view>
+      </cell>
+    </cellGroup>
+    <view slot="right">
+      <van-button type="danger">删除</van-button>
+    </view>
+  </van-swipe-cell>
+
+
+
+</view>

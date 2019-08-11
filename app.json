@@ -1,0 +1,45 @@
+{
+  "pages": [
+        "pages/index/index", 
+    "pages/index/count",
+    "pages/logs/logs",
+    "pages/index/user"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "923的钱包",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#ff0947",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/count",
+        "iconPath": "icon/detail.png",
+        "selectedIconPath": "icon/detail_on.png",
+        "text": "图表"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "icon/dollar.png",
+        "selectedIconPath": "icon/dollar_on.png",
+        "text": "记账"
+      },
+      {
+        "pagePath": "pages/index/user",
+        "iconPath": "icon/setting.png",
+        "selectedIconPath": "icon/setting_on.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-dialog": "/dist/dialog/index",
+    "van-button": "dist/button/index"
+  }
+}
